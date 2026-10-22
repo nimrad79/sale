@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#203b2b">
+<meta name="description" content="Order Kienyeji Improved chicken and farm-fresh eggs from Nim's Farm in Kenya. Place your order directly through WhatsApp.">
+<title>Nim's Farm | Kienyeji Improved Chicken</title>
+<style>
+:root{--forest:brown;--forest2:beige;--leaf:black;--cream:#fbf8f0;--paper:#fffefa;--gold:green;--rust:#b84932;--ink:#242b24;--muted:#6d756b;--line:#e8e2d5;--shadow:0 18px 45px rgba(32,59,43,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit}button,input,textarea{font:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(251,248,240,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1160px;margin:auto;min-height:76px;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--forest);font-weight:850;font-size:1.12rem;letter-spacing:-.03em}
+.brand-mark{width:43px;height:43px;border-radius:14px;background:var(--forest);display:grid;place-items:center;font-size:1.55rem}
+.navlinks{display:flex;gap:28px;align-items:center}.navlinks a{text-decoration:none;color:#4e594e;font-size:.94rem;font-weight:650}.navlinks a:hover{color:var(--rust)}
+.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;cursor:pointer;font-weight:750;border-radius:999px;padding:13px 21px;transition:transform .2s,background .2s;line-height:1.25}
+.btn:hover{transform:translateY(-2px)}.btn-dark{background:var(--forest);color:#fff}.btn-dark:hover{background:var(--forest2)}.btn-gold{background:var(--gold);color:#2d281c}.btn-outline{background:transparent;border:1px solid #c9d0c4;color:var(--forest)}
+.cart-trigger{position:relative}.cart-count{background:var(--gold);color:var(--forest);border-radius:99px;padding:1px 7px;font-size:.78rem;margin-left:2px}
+.hero{max-width:1160px;margin:auto;padding:64px 24px 70px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:50px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e9efdf;color:var(--forest2);padding:7px 12px;border-radius:99px;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
+.hero h1{font-size:clamp(2.8rem,5.7vw,5rem);line-height:1.02;letter-spacing:-.065em;color:var(--forest);margin:20px 0}
+.hero h1 em{font-style:normal;color:var(--rust)}.hero-copy{font-size:1.1rem;max-width:520px;color:var(--muted);margin-bottom:27px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-note{margin-top:24px;color:var(--muted);font-size:.88rem;display:flex;gap:9px;align-items:center}
+.hero-art{min-height:430px;border-radius:30px;background:#e7ecd9 url("https://static.wixstatic.com/media/11062b_6037002b50f24c58b2dc28b405438497~mv2_d_5781_3854_s_4_2.jpg/v1/fill/w_1600,h_1400,al_c,q_85/11062b_6037002b50f24c58b2dc28b405438497~mv2_d_5781_3854_s_4_2.jpg") center/cover no-repeat;position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}
+.hero-art:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,24,.02),rgba(15,42,24,.24))}.hero-art:after{content:none}
+.art-sun{display:none}
+.chicken-illustration{display:none}
+.art-label{position:absolute;z-index:2;left:22px;bottom:22px;background:rgba(255,254,250,.92);padding:13px 17px;border-radius:16px;box-shadow:var(--shadow);font-size:.88rem;font-weight:750;color:var(--forest)}
+.art-label small{display:block;font-weight:500;color:var(--muted);font-size:.76rem}
+.trust-strip{background:var(--forest);color:#fff}.trust-inner{max-width:1160px;margin:auto;padding:20px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust-item{display:flex;align-items:center;justify-content:center;gap:11px;font-size:.9rem;font-weight:650}.trust-item span{font-size:1.35rem}
+section.content{max-width:1160px;margin:auto;padding:78px 24px}
+.section-top{text-align:center;max-width:680px;margin:0 auto 35px}.kicker{color:var(--rust);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}.section-top h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;color:var(--forest);line-height:1.1;margin:9px 0 13px}.section-top p{color:var(--muted)}
+.price-note{max-width:760px;margin:0 auto 28px;background:#f4ead6;border:1px solid #ead8b7;border-radius:16px;padding:16px 20px;text-align:center;color:#59452b}.price-note strong{color:var(--rust)}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.product{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 8px 25px rgba(32,59,43,.035);display:flex;flex-direction:column;min-height:270px;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-visual{height:155px;border-radius:16px;background:#f6eedf;overflow:hidden;margin-bottom:17px}.product-visual img{width:100%;height:100%;display:block;object-fit:cover}
+.product h3{font-size:1.05rem;line-height:1.3;color:var(--forest)}.unit{color:var(--muted);font-size:.85rem;margin:4px 0 15px}
+.product-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}.price{font-size:1.13rem;font-weight:850;color:var(--rust)}.price small{display:block;font-size:.72rem;font-weight:600;color:var(--muted)}
+.add-btn{border:0;background:var(--forest);color:white;padding:10px 13px;border-radius:11px;font-size:.85rem;font-weight:750;cursor:pointer}.add-btn:hover{background:var(--forest2)}
+.about-band{background:#f0f1e6}.about-inner{max-width:1160px;margin:auto;padding:70px 24px;display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}.about-heading h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;line-height:1.1;color:var(--forest);margin:10px 0 16px}.about-heading p{color:var(--muted)}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.feature{background:rgba(255,254,250,.8);border:1px solid #e0e4d6;border-radius:18px;padding:20px}.feature-icon{font-size:1.65rem}.feature h3{font-size:.98rem;color:var(--forest);margin:8px 0 4px}.feature p{font-size:.86rem;color:var(--muted)}
+.order-panel{background:var(--forest);border-radius:28px;padding:36px;color:#fff;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.order-panel h2{font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-.04em;line-height:1.15;margin-bottom:9px}.order-panel p{color:#d6e0d3;max-width:620px}.order-panel .btn{white-space:nowrap}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.contact-info h3{font-size:1.3rem;color:var(--forest);margin-bottom:10px}.contact-info>p{color:var(--muted);margin-bottom:22px}.contact-line{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}.contact-line b{display:block;font-size:.92rem}.contact-line a,.contact-line span{color:var(--muted);font-size:.9rem;text-decoration:none;overflow-wrap:anywhere}.contact-form{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:25px}.field{margin-bottom:14px}.field label{display:block;font-size:.85rem;font-weight:700;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #dcded4;border-radius:12px;background:#fff;padding:12px 14px;outline:none;color:var(--ink)}.field input:focus,.field textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 3px rgba(102,132,76,.13)}.contact-form .btn{width:100%}.form-help{font-size:.78rem;color:var(--muted);margin-top:10px}
+footer{background:#172b1e;color:#d9e2d7;padding:30px 24px}.footer-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-brand{font-weight:800;color:white}.footer-inner p,.footer-inner a{font-size:.84rem;color:#c1cec0;text-decoration:none}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:25;background:#20bd5a;color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:99px;box-shadow:0 8px 24px #163d2460;display:flex;gap:8px;align-items:center}
+.overlay{position:fixed;inset:0;background:#101b1390;z-index:40;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;z-index:41;right:0;top:0;height:100dvh;width:420px;max-width:100%;background:var(--paper);transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-15px 0 45px #0002}.drawer.open{transform:translateX(0)}.drawer-head{padding:21px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h2{color:var(--forest)}.close-btn{border:0;background:#f0f1e8;border-radius:10px;width:38px;height:38px;font-size:1.1rem;cursor:pointer}.drawer-items{padding:12px 21px;overflow:auto;flex:1}.empty{text-align:center;padding:50px 10px;color:var(--muted)}.cart-row{display:grid;grid-template-columns:45px 1fr auto;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.cart-emoji{font-size:1.8rem}.cart-name{font-size:.9rem;font-weight:750;color:var(--forest)}.cart-sub{font-size:.78rem;color:var(--muted)}.qty{display:flex;align-items:center;gap:9px}.qty button{width:28px;height:28px;border:1px solid var(--line);background:white;border-radius:8px;cursor:pointer;font-weight:800}.drawer-foot{padding:21px;border-top:1px solid var(--line)}.total-line{display:flex;justify-content:space-between;font-weight:850;font-size:1.1rem;margin-bottom:14px}.drawer-foot .btn{width:100%;border-radius:13px}.drawer-note{font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding-top:45px}.hero-art{min-height:340px}.chicken-illustration{font-size:11rem}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.about-inner{grid-template-columns:1fr;gap:28px}.contact-grid{grid-template-columns:1fr}.navlinks{gap:15px}}
+@media(max-width:560px){.nav{padding:11px 16px;gap:10px;min-height:66px}.brand{font-size:.98rem}.brand-mark{width:36px;height:36px;font-size:1.3rem;border-radius:11px}.navlinks{display:none}.nav .btn{padding:10px 12px;font-size:.83rem}.hero{padding:43px 18px 45px}.hero h1{font-size:3rem}.hero-copy{font-size:1rem}.hero-art{min-height:290px;border-radius:23px}.chicken-illustration{font-size:9rem}.trust-inner{padding:17px 15px;grid-template-columns:1fr;gap:11px}.trust-item{justify-content:flex-start}.content{padding:58px 18px!important}.products{grid-template-columns:1fr}.product{min-height:245px}.product-visual{height:100px}.about-inner{padding:55px 18px}.features{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:15px}.order-panel{grid-template-columns:1fr;padding:25px}.order-panel .btn{width:100%}.contact-form{padding:18px}.wa-float{right:13px;bottom:13px;padding:12px 15px;font-size:.88rem}.footer-inner{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="#home"><span class="brand-mark">🐔</span><span>Nim's Farm</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">Our Farm</a><a href="#contact">Contact</a></nav>
+    <button class="btn btn-dark cart-trigger" onclick="openCart()" aria-label="Open shopping cart">Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div>
+      <span class="eyebrow">● Farm-raised in Kenya</span>
+      <h1>Good food starts with <em>the best chicken.</em></h1>
+      <p class="hero-copy">Kienyeji Improved chicken, sold with care and ordered with ease. Choose what you need and send your order straight to us on WhatsApp.</p>
+      <div class="hero-actions"><a class="btn btn-gold" href="#shop">Explore our products <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="https://wa.me/254759261007?text=Hello%20Nim's%20Farm%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+      <p class="hero-note"><span>✓</span> Straightforward pricing · quality products · Personal service · Easy ordering</p>
+    </div>
+    <div class="hero-art" role="img" aria-label="Illustration representing farm-raised chicken"><div class="art-sun"></div><div class="chicken-illustration">🐓</div><div class="art-label">Raised with care<small>From our farm to your table</small></div></div>
+  </section>
+  <div class="trust-strip"><div class="trust-inner"><div class="trust-item"><span>🌿</span> Kienyeji Improved Chicken</div><div class="trust-item"><span>🛒</span> Simple WhatsApp ordering</div><div class="trust-item"><span>🤝</span> Friendly,quick response, direct service</div></div></div>
+  <section class="content" id="shop">
+    <div class="section-top"><span class="kicker">Shop the farm</span><h2>Fresh choices, clear prices</h2><p>Build your basket, check your total, then send your order to us on WhatsApp to confirm availability and delivery.</p></div>
+    <div class="price-note"><strong>Kienyeji Improved whole bird:</strong> KSh 1,500 each for orders of 1–10 birds. Buy more than 10 birds and pay just <strong>KSh 1000 per bird.</strong> Bulk pricing is applied automatically in your cart.</div>
+    <div class="products" id="productGrid"></div>
+  </section>
+  <div class="about-band" id="about"><div class="about-inner">
+    <div class="about-heading"><span class="kicker">A little about us</span><h2>Local farm values. Personal service.</h2><p>At Nim's Farm, we want ordering poultry products to feel simple and personal. Reach out with questions about quantities, availability or delivery before placing your order.</p></div>
+    <div class="features">
+      <article class="feature"><span class="feature-icon">🐔</span><h3>Kienyeji Improved</h3><p>A popular choice for households, events and resellers.</p></article>
+      <article class="feature"><span class="feature-icon">💬</span><h3>Order directly</h3><p>Your basket becomes a clear WhatsApp order message.</p></article>
+      <article class="feature"><span class="feature-icon">🧾</span><h3>Clear totals</h3><p>Review quantities and prices before sending your order.</p></article>
+      <article class="feature"><span class="feature-icon">📍</span><h3>Talk delivery</h3><p>Confirm delivery location, timing and any extra costs with us.</p></article>
+    </div>
+  </div></div>
+  <section class="content">
+    <div class="order-panel"><div><h2>Ready to order from Nim's Farm?</h2><p>Add your products to the basket and send the details directly to WhatsApp. We'll confirm your order and delivery arrangements with you.</p></div><button class="btn btn-gold" onclick="openCart()">Review my basket →</button></div>
+  </section>
+  <section class="content" id="contact">
+    <div class="section-top"><span class="kicker">Get in touch</span><h2>Let's talk chicken</h2><p>Have a question or a special request? Contact us directly.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info"><h3>Nim's Farm</h3><p>For orders, availability and delivery questions, WhatsApp is the quickest way to reach us.</p>
+        <div class="contact-line"><span>☎</span><div><b>Call us</b><a href="tel:+254759261007">0759 261 007</a></div></div>
+        <div class="contact-line"><span>✉</span><div><b>Email</b><a href="mailto:agufanimrod@gmail.com">agufanimrod@gmail.com</a></div></div>
+        <div class="contact-line"><span>⌖</span><div><b>Farm location</b><a href="https://maps.app.goo.gl/xvTUoV7g3JK7eAYX8?g_st=ac" target="_blank" rel="noopener">View on Google Maps and come visit us!</a></div></div>
+        <div class="contact-line"><span>◉</span><div><b>WhatsApp</b><a href="https://wa.me/254759261007" target="_blank" rel="noopener">Chat with Nim's Farm</a></div></div>
+      </div>
+      <form class="contact-form" onsubmit="sendEnquiry(event)">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. wafula wepukhulu"></div>
+        <div class="field"><label for="phone">Your phone number (optional)</label><input id="phone" name="phone" autocomplete="tel" placeholder="e.g. 07xx xxx xxx"></div>
+        <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" rows="4" required placeholder="Tell us what you'd like to know..."></textarea></div>
+        <button class="btn btn-dark" type="submit">Send enquiry on WhatsApp</button><p class="form-help">This opens WhatsApp with your message ready to send. It does not send anything until you press Send in WhatsApp.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="footer-inner"><div><div class="footer-brand">🐔 Nim's Farm</div><p>Good food starts with the best chicken.</p></div><p>© <span id="year"></span> Nim's Farm · <a href="#home">Back to top ↑</a></p></div></footer>
+<a class="wa-float" href="https://wa.me/254759261007?text=Hello%20Nim%27s%20Farm%2C%20I%27d%20like%20to%20make%20an%20order." target="_blank" rel="noopener">WhatsApp us ↗</a>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-modal="true" role="dialog">
+  <div class="drawer-head"><h2>Your basket</h2><button class="close-btn" onclick="closeCart()" aria-label="Close basket">×</button></div>
+  <div class="drawer-items" id="cartItems"><p class="empty">Your basket is empty.</p></div>
+  <div class="drawer-foot"><div class="total-line"><span>Total</span><span id="cartTotal">KSh 0</span></div><button class="btn btn-dark" onclick="checkout()">Send order to WhatsApp ↗</button><p class="drawer-note">No payment is taken on this website. Confirm your order and delivery with us on WhatsApp.</p></div>
+</aside>
+<script>
+const WHATSAPP_NUMBER = "254759261007";
+const products = [
+ {id:1,name:"Kienyeji Improved (Whole Bird)",price:1500,bulkPrice:1000,bulkThreshold:10,unit:"per bird",emoji:"🐔",photo:"https://www.deheus.co.ke/siteassets/animals/poultry/dual-purpose-kip.jpg?format=webp&mode=crop&width=622",note:"KSh 1000 each when you order more than 10"},
+ {id:2,name:"Chicken Meat",price:600,unit:"per kg",emoji:"🍗",photo:"https://cdn.meatigo.com/fit-in/651x552/product/1774426034338_144_2982022__Premium_Whole_Chicken"},
+ {id:3,name:"Eggs",price:30,unit:"per egg",emoji:"🥚",photo:"https://img.taste.com.au/VQ-HZRDu/w720-h480-cfill-q80/taste/2007/04/eggs-182316-1.jpg"},
+ {id:4,name:"Chicken Breast",price:750,unit:"per kg",emoji:"🍗",photo:"https://images.unsplash.com/photo-1682991136736-a2b44623eeba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"},
+ {id:5,name:"Chicken Wings",price:650,unit:"per kg",emoji:"🍖",photo:"https://media.istockphoto.com/id/489516996/photo/raw-chicken-wings-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=0wJ7DOsttlBj3BeBRzRd1tYHYRDTTkWM4j3CdUhZ6Vc="},
+ {id:6,name:"Drumsticks",price:850,unit:"per kg",emoji:"🍗",photo:"https://media.istockphoto.com/id/93456466/photo/raw-skin-on-chicken-legs-cross-each-other.jpg?s=612x612&w=0&k=20&c=VdW45mtK4qPugtXMeoucpPr3KJLzKLfIkecizfqQIoo="}
+];
+let cart = {};
+const money = n => "KSh " + n.toLocaleString("en-KE");
+function unitPrice(p, qty){return p.bulkPrice && qty > p.bulkThreshold ? p.bulkPrice : p.price}
+function lineTotal(p, qty){return unitPrice(p,qty)*qty}
+function total(){return Object.entries(cart).reduce((sum,[id,qty])=>{const p=products.find(x=>x.id===Number(id));return sum+(p?lineTotal(p,qty):0)},0)}
+function cartQuantity(){return Object.values(cart).reduce((a,b)=>a+b,0)}
+function renderProducts(){
+ document.getElementById("productGrid").innerHTML=products.map(p=>`
+ <article class="product"><div class="product-visual"><img src="${p.photo}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"></div><h3>${p.name}</h3><p class="unit">${p.unit}</p><div class="product-foot"><div class="price">${money(p.price)}<small>${p.unit}</small></div><button class="add-btn" onclick="addToCart(${p.id})">Add to basket +</button></div>${p.note?`<p class="unit" style="margin:12px 0 0;color:var(--forest2)">${p.note}</p>`:""}</article>`).join("");
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+function renderCart(){
+ const box=document.getElementById("cartItems");
+ const entries=Object.entries(cart);
+ if(!entries.length){box.innerHTML='<p class="empty">Your basket is empty. Add a few farm favourites to get started.</p>'}
+ else{box.innerHTML=entries.map(([id,qty])=>{const p=products.find(x=>x.id===Number(id));const price=unitPrice(p,qty);return `<div class="cart-row"><div class="cart-emoji">${p.emoji}</div><div><div class="cart-name">${p.name}</div><div class="cart-sub">${money(price)} each · ${money(lineTotal(p,qty))}</div></div><div class="qty"><button aria-label="Decrease ${p.name}" onclick="changeQty(${p.id},-1)">−</button><span>${qty}</span><button aria-label="Increase ${p.name}" onclick="changeQty(${p.id},1)">+</button></div></div>`}).join("")}
+ document.getElementById("cartTotal").textContent=money(total());
+ document.getElementById("cartCount").textContent=cartQuantity();
+}
+function openCart(){document.getElementById("cartDrawer").classList.add("open");document.getElementById("overlay").classList.add("show");document.body.style.overflow="hidden"}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.getElementById("overlay").classList.remove("show");document.body.style.overflow=""}
+function checkout(){
+ if(!cartQuantity()){alert("Your basket is empty. Add a product before ordering.");return}
+ const lines=Object.entries(cart).map(([id,qty])=>{const p=products.find(x=>x.id===Number(id));return `• ${p.name} — ${qty} × ${money(unitPrice(p,qty))} = ${money(lineTotal(p,qty))}`});
+ const birdQty=cart[1]||0;
+ let message=`Hello Nim's Farm, I'd like to place an order:\n\n${lines.join("\n")}\n\nTotal: ${money(total())}`;
+ if(birdQty>10)message+=`\n\nBulk price applied: KSh 1000 per whole bird for ${birdQty} birds.`;
+ message+="\n\nPlease confirm availability, delivery charges and payment details. Thank you.";
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+}
+function sendEnquiry(event){event.preventDefault();const form=new FormData(event.target);const name=(form.get("name")||"").trim();const phone=(form.get("phone")||"").trim();const message=(form.get("message")||"").trim();const text=`Hello Nim's Farm, my name is ${name}.${phone?`\nMy phone number is ${phone}.`:""}\n\n${message}`;window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,"_blank","noopener")}
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();renderCart();
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
+</script>
+</body>
+</html>
